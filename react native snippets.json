@@ -1,0 +1,36 @@
+{
+	"React Native Component": {
+		"scope": "javascript, typescript, typescriptreact",
+		"prefix": "rnc",
+		"body": [
+			"import React from 'react';",
+			"import { View } from 'react-native';",
+			"import { styles } from './styles';",
+			"",
+			"export function ${TM_DIRECTORY/.*[\\\\|\\/]+(.*)/$1/}(){",
+			"  return (",
+			"    <View style={styles.container}>",
+			"",
+			"    </View>",
+			"  );",
+			"}"
+		],
+		"description": "Basic React Native Componente"
+	},
+
+	"React Native Style": {
+	 	"scope": "javascript, typescript",
+	 	"prefix": "rns",
+	 	"body": [
+			"import { StyleSheet } from 'react-native';",
+			"",
+			"export const styles = StyleSheet.create({",
+		  "  container: {",
+			"    flex: 1",
+			"  }",
+			"});"
+	 	],
+	"description": "Basic stylesheet for React Native"
+	}
+
+}
