@@ -52,7 +52,7 @@
     "prefix": "repo",
     "body": [
       "import { EntityRepository, Repository } from 'typeorm';",
-      "import { ${entity} } from '../entities/${entity}';",
+      "import { ${entity} } from '../entities/${entity}.ts';",
       "",
       "@EntityRepository(${entity})",
       "class ${TM_FILENAME_BASE/(.*)/${1}/} extends Repository<${entity}> {}",
@@ -66,7 +66,7 @@
     "prefix": "cont",
     "body": [
       "import { Request, Response } from 'express';",
-      "import { ${service} } from '../services/${service}';",
+      "import { ${service} } from '../services/${service}.ts';",
       "",
       "class ${TM_FILENAME_BASE/(.*)/${1}/} {",
       " async handle(request: Request, response: Response){",
@@ -83,7 +83,7 @@
     "prefix": "serv",
     "body": [
       "import { getCustomRepository } from 'typeorm'",
-      "import { ${repository} } from '../services/${repository}';",
+      "import { ${repository} } from '../repositories/${repository}.ts';",
       "",
       "interface I${TM_FILENAME_BASE/(.*)/${1}/}{",
       "",
